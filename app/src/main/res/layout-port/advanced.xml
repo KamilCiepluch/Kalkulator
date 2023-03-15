@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col1_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col1_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col2_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col2_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col3_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col3_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col4_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col4_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Buttons_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+
+    <LinearLayout
+        android:id="@+id/first_col"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/row_end"
+        app:layout_constraintLeft_toRightOf="@+id/col1_start"
+        app:layout_constraintRight_toLeftOf="@+id/col1_end"
+        app:layout_constraintTop_toBottomOf="@+id/Buttons_start"
+        app:layout_constraintVertical_weight="1">
+
+
+        <Button
+            android:id="@+id/Button_sqrt"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_sqrt"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_deg"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_deg"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_inv"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_inv"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_ac"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_ac"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_7"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_7"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_4"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_4"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_1"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_1"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_0"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_0"
+            app:backgroundTint="@color/purple_700" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/second_col"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/row_end"
+        app:layout_constraintLeft_toRightOf="@+id/col2_start"
+        app:layout_constraintRight_toLeftOf="@+id/col2_end"
+        app:layout_constraintTop_toBottomOf="@+id/Buttons_start"
+        app:layout_constraintVertical_weight="1">
+
+
+        <Button
+            android:id="@+id/Button_pi"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_pi"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_sin"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_sin"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+
+            android:id="@+id/Button_e"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_e"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_brackets"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_brackets"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_8"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_8"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_5"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_5"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_2"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_2"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_comma"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_comma"
+            app:backgroundTint="@color/purple_700" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/third_col"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/row_end"
+        app:layout_constraintLeft_toRightOf="@+id/col3_start"
+        app:layout_constraintRight_toLeftOf="@+id/col3_end"
+        app:layout_constraintTop_toBottomOf="@+id/Buttons_start"
+        app:layout_constraintVertical_weight="1">
+
+
+        <Button
+            android:id="@+id/Button_hat"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_hat"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_cos"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_cos"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_ln"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_ln"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_percent"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_percent"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_9"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_9"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_6"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_6"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_3"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_3"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_del"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_del"
+            app:backgroundTint="@color/purple_700" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fourth_col"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/row_end"
+        app:layout_constraintLeft_toRightOf="@+id/col4_start"
+        app:layout_constraintRight_toLeftOf="@+id/col4_end"
+        app:layout_constraintTop_toBottomOf="@+id/Buttons_start"
+        app:layout_constraintVertical_weight="1">
+
+
+        <Button
+            android:id="@+id/Button_abs"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_abs"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_tan"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_tan"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_log"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_log"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_dev"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_dev"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_mult"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_mult"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_minus"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_minus"
+            app:backgroundTint="@color/purple_700" />
+
+
+        <Button
+            android:id="@+id/Button_plus"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_plus"
+            app:backgroundTint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/Button_equals"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/Button_equals"
+            app:backgroundTint="@color/purple_700" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Buttons_start"
+        app:layout_constraintLeft_toRightOf="@+id/col1_start"
+        app:layout_constraintRight_toLeftOf="@+id/col4_end"
+        app:layout_constraintTop_toBottomOf="@+id/row_start"
+        app:layout_constraintVertical_weight="1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col1_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col1_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/first_col"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+
+        app:layout_constraintTop_toBottomOf="@+id/row_start"
+        app:layout_constraintRight_toLeftOf="@+id/col1_end"
+        app:layout_constraintBottom_toTopOf="@+id/row_end"
+        app:layout_constraintLeft_toRightOf="@+id/col1_start"
+
+
+        app:layout_constraintVertical_weight="1">
+
+
+
+        <Button
+            android:id="@+id/button_Simple"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            app:backgroundTint="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/button_Simple" />
+
+        <Button
+            android:id="@+id/button_Advanced"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            app:backgroundTint="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/button_Advanced" />
+
+
+        <Button
+            android:id="@+id/button_About"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            app:backgroundTint="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/button_About" />
+
+        <Button
+            android:id="@+id/button_Exit"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            app:backgroundTint="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="@string/button_Exit" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
