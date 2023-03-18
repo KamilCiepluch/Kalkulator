@@ -2,7 +2,6 @@ package com.example.kalkulator;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
@@ -15,6 +14,9 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+
+
+
 
 public class SimpleCalc extends AppCompatActivity {
 
@@ -47,15 +49,42 @@ public class SimpleCalc extends AppCompatActivity {
         }
     }
 
+
+
+    private boolean isAbs(String str)
+    {
+        if(str.length()<4) return false;
+        if(str.charAt(str.length()-1)=='(')
+        {
+            return str.endsWith("abs(");
+        }
+        return false;
+    }
+
+    private boolean isSqrt(String str)
+    {
+        if(str.length()<5) return false;
+        if(str.charAt(str.length()-1)=='(')
+        {
+            return str.endsWith("sqrt(");
+        }
+        return false;
+    }
+
+
+
+
+
+
     private LastOperation parseToEnum(String str) {
         switch (str) {
             case "NUMBER": return LastOperation.NUMBER;
             case "EQUALS": return LastOperation.EQUALS;
             case "LEFT_BR": return LastOperation.LEFT_BR;
             case "RIGHT_BR": return LastOperation.RIGHT_BR;
-            case "DEL": return LastOperation.DEL;
             case "COMMA" : return LastOperation.COMMA;
             case "HAT": return LastOperation.HAT;
+            case "FACTORIAL": return LastOperation.FACTORIAL;
             default : return LastOperation.ARITHMETIC;
         }
     }
@@ -69,6 +98,7 @@ public class SimpleCalc extends AppCompatActivity {
         lastOperation = LastOperation.ARITHMETIC;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -119,7 +149,6 @@ public class SimpleCalc extends AppCompatActivity {
 
         Button button2 = findViewById(R.id.Button_2);
         button2.setOnClickListener(view -> {
-
             if(lastOperation != LastOperation.EQUALS) {
                 if (currentInput.length() == 1 && currentInput.charAt(0) == '0')
                     currentInput.delete(0, 1);
@@ -150,16 +179,15 @@ public class SimpleCalc extends AppCompatActivity {
         button4.setOnClickListener(view -> {
             if(lastOperation != LastOperation.EQUALS)
             {
-            if(currentInput.length()==1 && currentInput.charAt(0)=='0')
-                currentInput.delete(0,1);
+                if(currentInput.length()==1 && currentInput.charAt(0)=='0')
+                    currentInput.delete(0,1);
 
-            currentInput.append(4);
-            lastOperation = LastOperation.NUMBER;
-            Log.i("My App", String.valueOf(equation));
-            System.out.println(equation);
-            clearScreen();
+                currentInput.append(4);
+                lastOperation = LastOperation.NUMBER;
+                Log.i("My App", String.valueOf(equation));
+                System.out.println(equation);
+                clearScreen();
             }
-
         });
 
         Button button5 = findViewById(R.id.Button_5);
@@ -204,7 +232,6 @@ public class SimpleCalc extends AppCompatActivity {
 
         Button button8 = findViewById(R.id.Button_8);
         button8.setOnClickListener(view -> {
-
             if(lastOperation != LastOperation.EQUALS){
             if(currentInput.length()==1 && currentInput.charAt(0)=='0')
                 currentInput.delete(0,1);
@@ -213,7 +240,6 @@ public class SimpleCalc extends AppCompatActivity {
             Log.i("My App", String.valueOf(equation));
             System.out.println(equation);
             clearScreen();}
-
         });
 
         Button button9 = findViewById(R.id.Button_9);
@@ -221,8 +247,6 @@ public class SimpleCalc extends AppCompatActivity {
             if(lastOperation != LastOperation.EQUALS){
             if(currentInput.length()==1 && currentInput.charAt(0)=='0')
                 currentInput.delete(0,1);
-
-
             currentInput.append(9);
             lastOperation = LastOperation.NUMBER;
             Log.i("My App", String.valueOf(equation));
@@ -269,7 +293,6 @@ public class SimpleCalc extends AppCompatActivity {
                     equation.append(")");
                     number_Of_rightBrackets++;
                 }
-
                 if(lastOperation==LastOperation.HAT)
                     equation.append(1);
 
@@ -278,7 +301,6 @@ public class SimpleCalc extends AppCompatActivity {
 
                 BigDecimal res = BigDecimal.valueOf(e.evaluate())
                         .setScale(numberOfDigitToRound, RoundingMode.HALF_UP);
-
 
                 Log.i("My App", String.valueOf(res.doubleValue()));
                 System.out.println(res);
@@ -303,35 +325,92 @@ public class SimpleCalc extends AppCompatActivity {
         // todo check if correct
         Button buttonDel = findViewById(R.id.Button_del);
         buttonDel.setOnClickListener(view -> {
-
             if(currentInput.length()!=0)
             {
-                if(currentInput.charAt(currentInput.length()-1)=='(')
+                if(isAbs(currentInput.toString()) || isSqrt(currentInput.toString()))
+                {
+                    if(isSqrt(currentInput.toString()))
+                    {
+                        currentInput.delete(currentInput.length()-5, currentInput.length());
+                    }
+                    else
+                    {
+                        currentInput.delete(currentInput.length()-4, currentInput.length());
+                    }
                     number_Of_leftBrackets--;
-                else if(currentInput.charAt(currentInput.length()-1)==')')
-                    number_Of_leftBrackets--;
+                }
+                else
+                {
+                    if(currentInput.charAt(currentInput.length()-1)=='(')
+                        number_Of_leftBrackets--;
+                    else if(currentInput.charAt(currentInput.length()-1)==')')
+                        number_Of_leftBrackets--;
+                    else if(currentInput.charAt(currentInput.length()-1)=='.')
+                        dot_in_number = false;
 
-                currentInput.deleteCharAt(currentInput.length()-1);
+                    currentInput.deleteCharAt(currentInput.length()-1);
+                    if(currentInput.length()!=0)
+                    {
+                        if(currentInput.charAt(currentInput.length()-1)>='0' &&
+                                currentInput.charAt(currentInput.length()-1)<='9')
+                        {
+                            lastOperation = LastOperation.NUMBER;
+                        }
+                    }
+                }
             }
             else if(equation.length()!=0)
             {
-                equation.deleteCharAt(equation.length()-1);
-            }
 
+                if(isAbs(equation.toString()) || isSqrt(equation.toString()))
+                {
+                    if(isSqrt(equation.toString()))
+                    {
+                        equation.delete(equation.length()-5, equation.length());
+                    }
+                    else
+                    {
+                        equation.delete(equation.length()-4, equation.length());
+                    }
+                    number_Of_leftBrackets--;
+                }
+
+                else
+                {
+                    if(equation.charAt(equation.length()-1)=='(')
+                        number_Of_leftBrackets--;
+                    else if(equation.charAt(equation.length()-1)==')')
+                        number_Of_leftBrackets--;
+                    else if(equation.charAt(equation.length()-1)=='.')
+                        dot_in_number = false;
+
+                    equation.deleteCharAt(equation.length()-1);
+                    if(equation.length()!=0)
+                    {
+                        if(equation.charAt(equation.length()-1)>='0' &&
+                                equation.charAt(equation.length()-1)<='9')
+                        {
+                            lastOperation = LastOperation.NUMBER;
+                        }
+                    }
+                }
+            }
 
             Log.i("My App", String.valueOf(equation));
             System.out.println(equation);
             clearScreen();
-            lastOperation = LastOperation.DEL;
         });
 
         Button buttonComma = findViewById(R.id.Button_comma);
         buttonComma.setOnClickListener(view -> {
 
-            if(lastOperation!=LastOperation.EQUALS && equation.length()!=0)
+            if(lastOperation!=LastOperation.EQUALS)
             {
                 if(currentInput.length()==0 || lastOperation == LastOperation.ARITHMETIC)
+                {
                     currentInput.append("0.");
+                    dot_in_number = true;
+                }
                 else if(!dot_in_number)
                 {
                     currentInput.append(".");
@@ -345,7 +424,10 @@ public class SimpleCalc extends AppCompatActivity {
 
         Button buttonAC = findViewById(R.id.Button_ac);
         buttonAC.setOnClickListener(view -> {
+            number_Of_leftBrackets = 0;
+            number_Of_rightBrackets =0;
             dot_in_number = false;
+            lastOperation = LastOperation.ARITHMETIC;
             equation.delete(0,equation.length());
             currentInput.delete(0,currentInput.length());
             System.out.println(currentInput);
@@ -354,7 +436,6 @@ public class SimpleCalc extends AppCompatActivity {
 
         Button buttonSqrt = findViewById(R.id.Button_sqrt);
         buttonSqrt.setOnClickListener(view -> {
-
             dot_in_number = false;
             currentInput.append("sqrt(");
             lastOperation = LastOperation.LEFT_BR;
@@ -365,8 +446,6 @@ public class SimpleCalc extends AppCompatActivity {
 
         Button buttonBracket = findViewById(R.id.Button_brackets);
         buttonBracket.setOnClickListener(view -> {
-
-
             if(lastOperation==LastOperation.ARITHMETIC || lastOperation == LastOperation.HAT)
             {
                 currentInput.append("(");
@@ -395,12 +474,15 @@ public class SimpleCalc extends AppCompatActivity {
 
         Button buttonPi = findViewById(R.id.Button_pi);
         buttonPi.setOnClickListener(view -> {
-
-            dot_in_number = true;
-            currentInput.append("3.14");
-            System.out.println(currentInput);
-            lastOperation = LastOperation.NUMBER;
-            clearScreen();
+            if(lastOperation!=LastOperation.NUMBER)
+            {
+                dot_in_number = true;
+                currentInput.append(BigDecimal.valueOf(Math.PI)
+                        .setScale(numberOfDigitToRound, RoundingMode.HALF_UP));
+                System.out.println(currentInput);
+                lastOperation = LastOperation.NUMBER;
+                clearScreen();
+            }
         });
 
         Button buttonAbs = findViewById(R.id.Button_abs);

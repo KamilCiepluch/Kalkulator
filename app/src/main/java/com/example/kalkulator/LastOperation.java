@@ -6,7 +6,7 @@ public enum LastOperation {
     EQUALS,
     LEFT_BR,
     RIGHT_BR,
-    DEL,
     COMMA,
-    HAT
+    HAT,
+    FACTORIAL
 }

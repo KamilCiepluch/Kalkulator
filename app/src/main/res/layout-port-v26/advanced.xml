@@ -112,14 +112,14 @@
             app:backgroundTint="@color/purple_700" />
 
         <Button
-            android:id="@+id/Button_deg"
+            android:id="@+id/Button_fac"
             style="@style/Widget.MaterialComponents.FloatingActionButton"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
-            android:text="@string/Button_deg"
+            android:text="@string/Button_fac"
             app:backgroundTint="@color/purple_700" />
 
         <Button

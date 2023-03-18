@@ -167,7 +167,7 @@
 
 
         <Button
-            android:id="@+id/Button_deg"
+            android:id="@+id/Button_fac"
             style="@style/Widget.MaterialComponents.FloatingActionButton"
             app:backgroundTint="@color/purple_700"
             android:layout_width="match_parent"
@@ -175,7 +175,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
-            android:text="@string/Button_deg" />
+            android:text="@string/Button_fac" />
 
         <Button
             android:id="@+id/Button_inv"
@@ -641,6 +641,9 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textSize="46sp"
+        android:singleLine="true"
+
         app:layout_constraintTop_toBottomOf="@+id/row_start"
         app:layout_constraintRight_toLeftOf="@+id/col8_end"
         app:layout_constraintBottom_toTopOf="@+id/Buttons_start"
