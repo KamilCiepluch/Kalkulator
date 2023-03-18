@@ -531,7 +531,7 @@
 
 
         <Button
-            android:id="@+id/Button_dev"
+            android:id="@+id/Button_div"
             style="@style/Widget.MaterialComponents.FloatingActionButton"
             app:backgroundTint="@color/purple_700"
             android:layout_width="match_parent"
@@ -539,10 +539,10 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
-            android:text="@string/Button_dev" />
+            android:text="@string/Button_div" />
 
         <Button
-            android:id="@+id/Button_mult"
+            android:id="@+id/Button_mul"
             style="@style/Widget.MaterialComponents.FloatingActionButton"
             app:backgroundTint="@color/purple_700"
             android:layout_width="match_parent"
@@ -550,7 +550,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
-            android:text="@string/Button_mult" />
+            android:text="@string/Button_mul" />
 
         <Button
             android:id="@+id/Button_minus"

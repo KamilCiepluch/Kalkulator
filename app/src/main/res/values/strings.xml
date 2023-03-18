@@ -8,8 +8,8 @@
     <string name="Button_comma">\u002c</string>>
     <string name="Button_percent">\u0025</string>>
     <string name="Button_abs">\u007cx\u007c</string>>
-    <string name="Button_dev">\u002f</string>>
-    <string name="Button_mult">\u002a</string>>
+    <string name="Button_div">\u002f</string>>
+    <string name="Button_mul">\u002a</string>>
     <string name="Button_minus">\u005f</string>>
     <string name="Button_plus">\u002b</string>>
     <string name="Button_equals">\u003d</string>>
