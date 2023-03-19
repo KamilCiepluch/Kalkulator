@@ -36,11 +36,14 @@
     <string name="button_Advanced">Advance Calculator</string>
     <string name="button_About">About</string>
     <string name="button_Exit">Exit</string>
-
     <string name="Button_asin">asin</string>
     <string name="Button_acos">acos</string>
     <string name="Button_atan">atan</string>
     <string name="Button_exp">e^x</string>
     <string name="Button_10x">10^x</string>
+
+
+    <string name="author_name"> Created by: Kamil Ciepluch</string>
+    <string name="release_date"> Release date: 19.03.2023 </string>string>
 
 </resources>

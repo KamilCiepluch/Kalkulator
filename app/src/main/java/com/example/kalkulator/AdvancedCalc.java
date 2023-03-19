@@ -221,7 +221,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append(0);
                 lastOperation = LastOperation.NUMBER;
                 Log.i("My App", String.valueOf(equation));
-                System.out.println(equation);
                 clearScreen();
             }
         });
@@ -278,7 +277,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append(4);
                 lastOperation = LastOperation.NUMBER;
                 Log.i("My App", String.valueOf(equation));
-                System.out.println(equation);
                 clearScreen();
             }
         });
@@ -292,7 +290,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append(5);
                 lastOperation = LastOperation.NUMBER;
                 Log.i("My App", String.valueOf(equation));
-                System.out.println(equation);
                 clearScreen();
             }
         });
@@ -305,7 +302,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append(6);
                 lastOperation = LastOperation.NUMBER;
                 Log.i("My App", String.valueOf(equation));
-                System.out.println(equation);
                 clearScreen();
             }
         });
@@ -318,7 +314,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append(7);
                 lastOperation = LastOperation.NUMBER;
                 Log.i("My App", String.valueOf(equation));
-                System.out.println(equation);
                 clearScreen();
             }
         });
@@ -331,7 +326,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append(8);
                 lastOperation = LastOperation.NUMBER;
                 Log.i("My App", String.valueOf(equation));
-                System.out.println(equation);
                 clearScreen();}
         });
 
@@ -343,7 +337,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append(9);
                 lastOperation = LastOperation.NUMBER;
                 Log.i("My App", String.valueOf(equation));
-                System.out.println(equation);
                 clearScreen();}
         });
 
@@ -358,7 +351,6 @@ public class AdvancedCalc extends AppCompatActivity {
 
             lastOperation = LastOperation.ARITHMETIC;
             Log.i("My App", String.valueOf(equation));
-            System.out.println(equation);
             clearScreen();
         });
 
@@ -370,7 +362,6 @@ public class AdvancedCalc extends AppCompatActivity {
             currentInput.delete(0,currentInput.length());
             lastOperation = LastOperation.ARITHMETIC;
             Log.i("My App", String.valueOf(equation));
-            System.out.println(equation);
             clearScreen();
         });
 
@@ -410,7 +401,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 if(lastOperation==LastOperation.HAT)
                     equation.append(1);
 
-                System.out.println(equation.toString());
                 Expression e = new ExpressionBuilder(equation.toString()).operator(factorial).build();
 
                 BigDecimal res = BigDecimal.valueOf(e.evaluate())
@@ -418,8 +408,6 @@ public class AdvancedCalc extends AppCompatActivity {
 
 
                 Log.i("My App", String.valueOf(res.doubleValue()));
-                System.out.println(res);
-
                 equation.delete(0, equation.capacity());
                 equation.append(res.doubleValue());
                 clearScreen();
@@ -524,7 +512,6 @@ public class AdvancedCalc extends AppCompatActivity {
             }
 
             Log.i("My App", String.valueOf(equation));
-            System.out.println(equation);
             clearScreen();
         });
 
@@ -533,7 +520,7 @@ public class AdvancedCalc extends AppCompatActivity {
 
             if(lastOperation!=LastOperation.EQUALS)
             {
-                if(currentInput.length()==0 || lastOperation == LastOperation.ARITHMETIC)
+                if(currentInput.length()==0 && equation.length()==0 || lastOperation == LastOperation.ARITHMETIC)
                 {
                     currentInput.append("0.");
                     dot_in_number = true;
@@ -543,7 +530,6 @@ public class AdvancedCalc extends AppCompatActivity {
                     currentInput.append(".");
                     dot_in_number = true;
                 }
-                System.out.println(currentInput);
                 clearScreen();
                 lastOperation = LastOperation.COMMA;
             }
@@ -557,7 +543,6 @@ public class AdvancedCalc extends AppCompatActivity {
             lastOperation = LastOperation.ARITHMETIC;
             equation.delete(0,equation.length());
             currentInput.delete(0,currentInput.length());
-            System.out.println(currentInput);
             clearScreen();
         });
 
@@ -567,7 +552,6 @@ public class AdvancedCalc extends AppCompatActivity {
             currentInput.append("sqrt(");
             lastOperation = LastOperation.LEFT_BR;
             number_Of_leftBrackets++;
-            System.out.println(currentInput);
             clearScreen();
         });
 
@@ -586,7 +570,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 lastOperation = LastOperation.RIGHT_BR;
             }
 
-            System.out.println(currentInput);
             clearScreen();
         });
 
@@ -594,7 +577,6 @@ public class AdvancedCalc extends AppCompatActivity {
         buttonHat.setOnClickListener(view -> {
             dot_in_number = false;
             currentInput.append("^");
-            System.out.println(currentInput);
             lastOperation = LastOperation.HAT;
             clearScreen();
         });
@@ -606,7 +588,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 dot_in_number = true;
                 currentInput.append(BigDecimal.valueOf(Math.PI)
                         .setScale(numberOfDigitToRound, RoundingMode.HALF_UP));
-                System.out.println(currentInput);
                 lastOperation = LastOperation.NUMBER;
                 clearScreen();
             }
@@ -616,7 +597,6 @@ public class AdvancedCalc extends AppCompatActivity {
         buttonAbs.setOnClickListener(view -> {
             currentInput.append("abs(");
             number_Of_leftBrackets++;
-            System.out.println(currentInput);
             lastOperation = LastOperation.ARITHMETIC;
             clearScreen();
         });
@@ -625,7 +605,6 @@ public class AdvancedCalc extends AppCompatActivity {
         buttonPercent.setOnClickListener(view -> {
             dot_in_number = false;
             currentInput.append("%");
-            System.out.println(currentInput);
             lastOperation = LastOperation.ARITHMETIC;
             clearScreen();
         });
@@ -635,7 +614,6 @@ public class AdvancedCalc extends AppCompatActivity {
 
             dot_in_number = false;
             currentInput.append("/");
-            System.out.println(currentInput);
             lastOperation = LastOperation.ARITHMETIC;
             clearScreen();
         });
@@ -644,7 +622,6 @@ public class AdvancedCalc extends AppCompatActivity {
         buttonMul.setOnClickListener(view -> {
             dot_in_number = false;
             currentInput.append("*");
-            System.out.println(currentInput);
             lastOperation = LastOperation.ARITHMETIC;
             clearScreen();
         });
@@ -658,7 +635,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append("sin(");
 
             number_Of_leftBrackets++;
-            System.out.println(currentInput);
             lastOperation = LastOperation.ARITHMETIC;
             clearScreen();
         });
@@ -671,7 +647,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append("cos(");
 
             number_Of_leftBrackets++;
-            System.out.println(currentInput);
             lastOperation = LastOperation.ARITHMETIC;
             clearScreen();
         });
@@ -684,7 +659,6 @@ public class AdvancedCalc extends AppCompatActivity {
                 currentInput.append("tan(");
 
             number_Of_leftBrackets++;
-            System.out.println(currentInput);
             lastOperation = LastOperation.ARITHMETIC;
             clearScreen();
         });
@@ -697,7 +671,6 @@ public class AdvancedCalc extends AppCompatActivity {
             {
                 currentInput.append(BigDecimal.valueOf(Math.E)
                         .setScale(numberOfDigitToRound, RoundingMode.HALF_UP));
-                System.out.println(currentInput);
                 lastOperation = LastOperation.NUMBER;
                 clearScreen();
             }
@@ -710,7 +683,6 @@ public class AdvancedCalc extends AppCompatActivity {
             else
                 currentInput.append("log2(");
             number_Of_leftBrackets++;
-            System.out.println(currentInput);
             lastOperation = LastOperation.ARITHMETIC;
             clearScreen();
         });
@@ -728,12 +700,8 @@ public class AdvancedCalc extends AppCompatActivity {
                 number_Of_leftBrackets++;
                 lastOperation = LastOperation.ARITHMETIC;
             }
-
-            System.out.println(currentInput);
-
             clearScreen();
         });
-
 
         Button buttonINV = findViewById(R.id.Button_inv);
         buttonINV.setOnClickListener(view -> {
@@ -758,13 +726,10 @@ public class AdvancedCalc extends AppCompatActivity {
             }
             clearScreen();
         });
-        // todo deg, ing
-
 
         Button buttonFac = findViewById(R.id.Button_fac);
         buttonFac.setOnClickListener(view -> {
             currentInput.append("!");
-            System.out.println(currentInput);
             lastOperation = LastOperation.FACTORIAL;
             clearScreen();
         });

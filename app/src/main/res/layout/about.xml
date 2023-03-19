@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10"></androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/col2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"></androidx.constraintlayout.widget.Guideline>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30"></androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50"></androidx.constraintlayout.widget.Guideline>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70"></androidx.constraintlayout.widget.Guideline>
+
+
+
+
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/author_name"
+            app:autoSizeTextType="uniform"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/row2"
+            app:layout_constraintLeft_toRightOf="@+id/col1"
+            app:layout_constraintRight_toLeftOf="@+id/col2"
+            app:layout_constraintTop_toBottomOf="@+id/row1"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/release"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/release_date"
+            app:autoSizeTextType="uniform"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/row3"
+            app:layout_constraintLeft_toRightOf="@+id/col1"
+            app:layout_constraintRight_toLeftOf="@+id/col2"
+            app:layout_constraintTop_toBottomOf="@+id/row2"
+         ></TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

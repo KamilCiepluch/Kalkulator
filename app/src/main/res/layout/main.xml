@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     tools:context=".MainActivity">
 
 
@@ -64,6 +65,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/button_Simple" />
 
         <Button
@@ -75,6 +77,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/button_Advanced" />
 
 
@@ -87,6 +90,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/button_About" />
 
         <Button
@@ -98,6 +102,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/button_Exit" />
 
     </LinearLayout>

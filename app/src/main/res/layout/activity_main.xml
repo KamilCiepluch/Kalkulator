@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     tools:context=".SimpleCalc">
 
 
@@ -109,6 +110,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_sqrt" />
 
         <Button
@@ -120,6 +122,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_ac" />
 
         <Button
@@ -131,6 +134,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_7" />
 
 
@@ -143,6 +147,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_4" />
 
         <Button
@@ -154,6 +159,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_1" />
 
         <Button
@@ -165,6 +171,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_0" />
     </LinearLayout>
 
@@ -193,6 +200,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_pi" />
 
         <Button
@@ -204,6 +212,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_brackets" />
 
         <Button
@@ -215,6 +224,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_8" />
 
 
@@ -227,6 +237,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_5" />
 
         <Button
@@ -238,6 +249,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_2" />
 
         <Button
@@ -249,6 +261,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_comma" />
     </LinearLayout>
 
@@ -275,6 +288,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_hat" />
 
         <Button
@@ -286,6 +300,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_percent" />
 
         <Button
@@ -297,6 +312,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_9" />
 
 
@@ -309,6 +325,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_6" />
 
         <Button
@@ -320,6 +337,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_3" />
 
         <Button
@@ -331,6 +349,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_del" />
     </LinearLayout>
 
@@ -340,7 +359,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-
         app:layout_constraintTop_toBottomOf="@+id/Buttons_start"
         app:layout_constraintRight_toLeftOf="@+id/col4_end"
         app:layout_constraintBottom_toTopOf="@+id/row_end"
@@ -356,6 +374,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_abs" />
 
         <Button
@@ -367,6 +386,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_div" />
 
         <Button
@@ -378,6 +398,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_mul" />
 
         <Button
@@ -389,6 +410,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_minus" />
 
 
@@ -401,6 +423,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_plus" />
 
         <Button
@@ -412,21 +435,18 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_equals" />
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
-
-
-
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         android:textSize="46sp"
         android:singleLine="true"
-
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/row_start"
         app:layout_constraintRight_toLeftOf="@+id/col4_end"
         app:layout_constraintBottom_toTopOf="@+id/Buttons_start"

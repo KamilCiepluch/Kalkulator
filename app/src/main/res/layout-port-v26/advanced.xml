@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     tools:ignore="MissingDefaultResource">
 
     <androidx.constraintlayout.widget.Guideline
@@ -11,42 +12,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/col1_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.24" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/col2_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/col2_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50" />
+        app:layout_constraintGuide_percent="0.48" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/col3_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.55" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/col3_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.72" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -54,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.80" />
+        app:layout_constraintGuide_percent="0.76" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -62,15 +63,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.96" />
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/row_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/row_start"
@@ -79,12 +73,21 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
+
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/Buttons_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/row_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
 
 
     <LinearLayout
@@ -108,8 +111,10 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_sqrt"
             app:backgroundTint="@color/purple_700" />
+
 
         <Button
             android:id="@+id/Button_fac"
@@ -119,6 +124,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_fac"
             app:backgroundTint="@color/purple_700" />
 
@@ -130,6 +136,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_inv"
             app:backgroundTint="@color/purple_700" />
 
@@ -141,6 +148,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_ac"
             app:backgroundTint="@color/purple_700" />
 
@@ -153,6 +161,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_7"
             app:backgroundTint="@color/purple_700" />
 
@@ -164,6 +173,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_4"
             app:backgroundTint="@color/purple_700" />
 
@@ -175,6 +185,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_1"
             app:backgroundTint="@color/purple_700" />
 
@@ -187,6 +198,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_0"
             app:backgroundTint="@color/purple_700" />
 
@@ -215,6 +227,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_pi"
             app:backgroundTint="@color/purple_700" />
 
@@ -226,6 +239,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_sin"
             app:backgroundTint="@color/purple_700" />
 
@@ -239,6 +253,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_e"
             app:backgroundTint="@color/purple_700" />
 
@@ -251,6 +266,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_brackets"
             app:backgroundTint="@color/purple_700" />
 
@@ -262,6 +278,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_8"
             app:backgroundTint="@color/purple_700" />
 
@@ -273,6 +290,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_5"
             app:backgroundTint="@color/purple_700" />
 
@@ -284,6 +302,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_2"
             app:backgroundTint="@color/purple_700" />
 
@@ -296,6 +315,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_comma"
             app:backgroundTint="@color/purple_700" />
 
@@ -322,6 +342,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_hat"
             app:backgroundTint="@color/purple_700" />
 
@@ -333,6 +354,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_cos"
             app:backgroundTint="@color/purple_700" />
 
@@ -345,6 +367,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_ln"
             app:backgroundTint="@color/purple_700" />
 
@@ -357,6 +380,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_percent"
             app:backgroundTint="@color/purple_700" />
 
@@ -369,6 +393,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_9"
             app:backgroundTint="@color/purple_700" />
 
@@ -380,6 +405,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_6"
             app:backgroundTint="@color/purple_700" />
 
@@ -391,6 +417,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_3"
             app:backgroundTint="@color/purple_700" />
 
@@ -403,6 +430,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_del"
             app:backgroundTint="@color/purple_700" />
 
@@ -431,6 +459,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_abs"
             app:backgroundTint="@color/purple_700" />
 
@@ -443,6 +472,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_tan"
             app:backgroundTint="@color/purple_700" />
 
@@ -455,6 +485,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_log"
             app:backgroundTint="@color/purple_700" />
 
@@ -467,6 +498,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_div"
             app:backgroundTint="@color/purple_700" />
 
@@ -478,6 +510,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_mul"
             app:backgroundTint="@color/purple_700" />
 
@@ -489,6 +522,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_minus"
             app:backgroundTint="@color/purple_700" />
 
@@ -501,6 +535,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_plus"
             app:backgroundTint="@color/purple_700" />
 
@@ -512,6 +547,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
+            android:textColor="@color/white"
             android:text="@string/Button_equals"
             app:backgroundTint="@color/purple_700" />
 
@@ -522,6 +558,9 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textSize="46sp"
+        android:singleLine="true"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/Buttons_start"
         app:layout_constraintLeft_toRightOf="@+id/col1_start"
         app:layout_constraintRight_toLeftOf="@+id/col4_end"
